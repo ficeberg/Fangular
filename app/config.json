@@ -1,0 +1,8 @@
+{
+    "offline": false,
+    "base": {
+        "ip": "localhost",
+        "port": 80,
+        "paging": true
+    }
+}

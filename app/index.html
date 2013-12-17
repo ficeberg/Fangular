@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en"><head>
+	<script src='lib/angular/angular-loader.min.js'></script>
+	<script src='lib/loader/head.min.js' data-headjs-load='assets/js/core/init.js'></script>
+	<title>Fangular</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/app.css">
+	<link rel="stylesheet" href="assets/css/rainbow.css">
+	<link rel="stylesheet" href="assets/css/demo.css">
+</head>
+<body class="ng-cloak">
+	<header class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<div class="dropdown pull-left">
+					<a class="brand dropdown-toggle" role="button" data-toggle="dropdown" href="#">
+						Fangular
+						<b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+						<li><a href="#/view1">view1</a></li>
+						<li><a href="#/view2">view2</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div style="margin: 32px;"></div>
+	<div role="main">
+		<header class="hero-unit" id="overview">
+			<div class="container">
+				<h1>
+					Fangular. Powered by <span class="small">Festum</span>
+				</h1>
+				<p>Bootstrap components written in pure <strong><a href="http://angularjs.org">AngularJS</a></strong> by the <strong><a href="http://angular-ui.github.io">AngularUI Team</a></strong></p>
+				<p class="btn-group">
+					<a class="btn btn-default" href="https://github.com/angular-ui/bootstrap"><i></i> Code on Github</a>
+					<a class="btn btn-primary" href="https://github.com/angular-ui/bootstrap/tree/gh-pages">
+						<i class="icon-download-alt icon-white"></i> Download <small>(0.7.0)</small>
+					</a>
+					<a class="btn btn-default" href="http://facebook.com/festum"><i class="icon-wrench"></i> Find Festum</a>
+				</p>
+			</div>
+		</header>
+		<div ng-view class="container">
+
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="container">
+			<div>Fangular: v<span app-version></span></div>
+		</div>
+	</footer>
+</body>
+</html>
