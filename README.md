@@ -2,7 +2,7 @@
 
 This is a fork of [Angular Seed](https://github.com/angular/angular-seed) but replaced Script.js to HeadJS and added [UI-Bootstrap](angular-ui.github.io/bootstrap/), [UI-Router](https://github.com/angular-ui/ui-router), [UI-Utils](http://angular-ui.github.io/ui-utils/) and [Angular-Translate](http://pascalprecht.github.io/angular-translate/).
 
-* AngularJS 1.2.5
+* AngularJS 1.2.6
 * Angular-Translate 1.1.1
 * UI-Bootstrap 0.7.0
 * UI-Router 0.2.7
