@@ -1,5 +1,8 @@
 'use strict';
-angular.module('fe0', [
+
+var app, deps;
+
+deps = [
 	'ngRoute',
 	'ngResource',
 	'fe0.filters',
@@ -7,18 +10,24 @@ angular.module('fe0', [
 	'fe0.services',
 	'fe0.directives',
 	'fe0.controllers'
-])
-.config(['$routeProvider', function($routeProvider) {
-	$routeProvider.when('/view1', {templateUrl: 'partials/partial1.html', controller: 'MyCtrl1'});
-	$routeProvider.when('/view2', {templateUrl: 'partials/partial2.html', controller: 'MyCtrl2'});
-	$routeProvider.otherwise({redirectTo: '/view1'});
-}])
+];
+if (angular.version.full.indexOf("1.2") >= 0) {
+	deps.push('ngAnimate');
+}
+app = angular.module('fe0', deps);
+
+app.config(['$routeProvider', function($routeProvider) {
+	$routeProvider.when('/main', {templateUrl: 'partials/main.html', controller: 'main'});
+	$routeProvider.when('/conf', {templateUrl: 'partials/conf.html', controller: 'conf'});
+	$routeProvider.otherwise({redirectTo: '/main'});
+}]);
+
 /**
  * Configuration
  *
  * @author Festum
  */
-.factory('config', function($location) {
+app.factory('config', function($location) {
 	var project = $location.absUrl().split('/')[3],
 	project = project.search("#")>0?project:'';
 	return JSON.parse(angular.toJson(
@@ -35,8 +44,7 @@ angular.module('fe0', [
 			}
 		}
 	));
-})
-.factory('configFile', function($resource) {
+});
+app.factory('configFile', function($resource) {
 	return $resource('config.json',{ }, {getData: {method:'GET', isArray: false}});
-})
-;
+});

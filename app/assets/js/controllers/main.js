@@ -1,5 +1,4 @@
-angular.module('fe0.controllers')
-.controller('MyCtrl1', function($scope, $http, $document, $modal, orderByFilter) {
+angular.module('fe0.controllers').controller('main', function($scope, $http, $document, $modal, orderByFilter) {
 
 	var url = "http://50.116.42.77:3001//api/bootstrap";
 	//iFrame for downloading
@@ -30,9 +29,3 @@ angular.module('fe0.controllers')
 	};
 
 })
-.controller('MyCtrl2', function($scope, $log, config, configFile) {
-	configFile.get(function(data){
-		$log.log(data);
-		$scope.config=data;
-	});
-});

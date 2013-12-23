@@ -7,6 +7,7 @@ head.load(
 	'lib/angular/angular-route.min.js',
 	'lib/angular/angular-resource.min.js',
 	'lib/angular/angular-translate.min.js',
+	'lib/angular/angular-animate.min.js',
 	'lib/angular-ui/ui-bootstrap-tpls.min.js',
 	'lib/angular-ui/ui-utils.min.js',
 	'lib/angular-ui/ui-router.min.js',
@@ -15,11 +16,14 @@ head.load(
 	'lib/rainbow/rainbow-javascript.js',
 	'lib/rainbow/rainbow-html.js',
 	'assets/js/core/struct.js',
-	'assets/js/core/app.js',
+	'assets/js/i18n/en_US.js',
+	'assets/js/i18n/zh_TW.js',
 	'assets/js/services/helper.js',
-	'assets/js/controllers/demo.js',
 	'assets/js/filters/interpolate.js',
-	'assets/js/directives/ver.js'
+	'assets/js/directives/ver.js',
+	'assets/js/controllers/main.js',
+	'assets/js/controllers/conf.js',
+	'assets/js/core/app.js'
 );
 
 head.ready(function () {

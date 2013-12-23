@@ -4,7 +4,8 @@ angular.module('fe0.controllers', [
 	'fe0.helper',
 	'fe0.directives',
 	'fe0.services',
-	'ui.bootstrap'
+	'ui.bootstrap',
+	'pascalprecht.translate'
 ]);
 
 angular.module('fe0.services', [
