@@ -23,9 +23,14 @@ head.load(
 	'assets/js/directives/ver.js',
 	'assets/js/controllers/main.js',
 	'assets/js/controllers/conf.js',
-	'assets/js/core/app.js'
+	function() {
+		head.load(
+			'assets/js/core/app.js'
+		);
+		head.ready(function () {
+			angular.bootstrap(document, ['cadm']);
+		});
+	}
 );
 
-head.ready(function () {
-	angular.bootstrap(document, ['fe0']);
-});
+
