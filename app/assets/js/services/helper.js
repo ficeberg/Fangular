@@ -1,5 +1,5 @@
 angular.module('fe0.helper', [])
-.value('version', '0.3.9')
+.value('version', '0.4.1')
 /**
  *                     bbbbbbbb
  *       OOOOOOOOO     b::::::b                         jjjj
@@ -195,6 +195,57 @@ angular.module('fe0.helper', [])
 			// Return the last object in the hierarchy:
 			return base;
 		},
+		/**
+		 * Rename Property
+		 *
+		 *	Object Rename Key
+		 *
+		 *	Usages:
+		 *
+		 *	renameProperty( obj, "fe0", "festum" );
+		 *
+		 * @function renameProperty( obj, oldName, newName )
+		 * @param object
+		 * @param old name you want to killed
+		 * @param new nanme for replace
+		 * @return updated object
+		 * @author Festum
+		 * @date 140108
+		 */
+		renameProperty: function (obj, oldName, newName) {
+			// Check for the old property name to avoid a ReferenceError in strict mode.
+			if (obj.hasOwnProperty(oldName)) {
+				obj[newName] = obj[oldName];
+				delete obj[oldName];
+			}
+			return obj;
+		},
+		/**
+		 * Remove Property
+		 *
+		 *	Object Rename Key
+		 *
+		 *	Usages:
+		 *
+		 *	renameProperty( obj, "name", "Festum" );
+		 *
+		 * @function renameProperty( obj, name, value )
+		 * @param object
+		 * @param name field
+		 * @param matching value
+		 * @return updated object
+		 * @author Festum
+		 * @date 140109
+		 */
+		removeProperty: function(obj, name, value) {
+			var array = $.map(obj, function(v,i){
+				return v[name] === value ? null : v;
+			});
+			obj.length = 0; //clear original array
+			obj.push.apply(obj, array); //push all elements except the one we want to delete
+			return obj;
+		},
+
 	}
 })
 /**
