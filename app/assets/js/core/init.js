@@ -1,8 +1,8 @@
 head.load(
-/*	'//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css',
+	'//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css',
 	'assets/css/app.css',
 	'assets/css/rainbow.css',
-	'assets/css/demo.css',*/
+	'assets/css/demo.css',
 	'lib/angular/angular.min.js',
 	'lib/angular/angular-route.min.js',
 	'lib/angular/angular-resource.min.js',
@@ -28,7 +28,7 @@ head.load(
 			'assets/js/core/app.js'
 		);
 		head.ready(function () {
-			angular.bootstrap(document, ['cadm']);
+			angular.bootstrap(document, ['fe0']);
 		});
 	}
 );

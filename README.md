@@ -2,16 +2,17 @@
 
 This is a fork of [Angular Seed](https://github.com/angular/angular-seed) but replaced Script.js to HeadJS and added [UI-Bootstrap](angular-ui.github.io/bootstrap/), [UI-Router](https://github.com/angular-ui/ui-router), [UI-Utils](http://angular-ui.github.io/ui-utils/) and [Angular-Translate](http://pascalprecht.github.io/angular-translate/).
 
-* AngularJS 1.2.8
+* AngularJS 1.2.9
 * Angular-Translate 1.1.1
-* UI-Bootstrap 0.9.0
-* UI-Router 0.2.7
+* UI-Bootstrap 0.10.0
+* UI-Router 0.2.8
 * UI-Utils 0.1.0
 * Full support for unit and e2e tests
 * Support for Karma Test Runner 0.10+ (formerly Testacular)
 
 ## Changes
 
+* Add property rename and remove to helper.
 * Make a config(config.json) file in the root for flexibilities.
 * System structure dig in deeper layer as assets/js/core, assets/js/controllers, assets/js/directives, assets/js/filters and assets/js/services.
 
