@@ -1,12 +1,12 @@
 {
-  "name": "angularjs-seed",
-  "description": "A starter project for AngularJS",
-  "repository": "https://github.com/angular/angular-seed",
+  "name": "Fangular",
+  "description": "An AngularJS seed plus HeadJS, UI-Bootstrap, UI-Router, UI-Utils and Angular-Translate...",
+  "repository": "https://github.com/Festum/Fangular",
   "devDependencies": {
     "phantomjs" : "~1.9",
     "karma" : "~0.10",
     "karma-junit-reporter" : "~0.1",
     "karma-jasmine" : "~0.1",
-    "karma-ng-scenario" : "~0.1"
+    "protractor" : "~0.17.0"
   }
 }
