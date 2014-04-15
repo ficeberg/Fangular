@@ -1,3 +1,5 @@
+"use strict";
+
 angular.module('fe0.helper', [])
 .value('version', '0.4.2')
 /**
@@ -139,7 +141,7 @@ angular.module('fe0.helper', [])
 					}
 				}
 				return dst;
-			}
+			};
 
 			// Loop through arguments and merge them into the first argument.
 			var out = arguments[0];
@@ -244,9 +246,8 @@ angular.module('fe0.helper', [])
 			obj.length = 0; //clear original array
 			obj.push.apply(obj, array); //push all elements except the one we want to delete
 			return obj;
-		},
-
-	}
+		}
+	};
 })
 /**
  *     SSSSSSSSSSSSSSS          tttt                                iiii
@@ -303,7 +304,7 @@ angular.module('fe0.helper', [])
 			return new Date(date.getTime() + hours*60*60000);
 		},
 		pathSlasher: function(path) {
-			if(path==undefined) path=jsonRoom.get('ufsPath');
+			if(path===undefined) path=jsonRoom.get('ufsPath');
 			path=path.replace(/\|/g, '/');
 			return path!='/'?('/'+path+'/').replace(/\/+/g, '/'):'/';
 		},
@@ -686,8 +687,7 @@ angular.module('fe0.helper', [])
 
 		_utf8_decode: function(utftext) {
 			var string = "";
-			var i = 0;
-			var c = c1 = c2 = 0;
+			var i = 0, c = 0, c1 = 0, c2 = 0;
 			while (i < utftext.length) {
 				c = utftext.charCodeAt(i);
 				if (c < 128) {
@@ -752,7 +752,7 @@ angular.module('fe0.helper', [])
 		'keyCode':          false
 	};
 	// Store all keyboard combination shortcuts
-	keyboardManagerService.keyboardEvent = {}
+	keyboardManagerService.keyboardEvent = {};
 	// Add a new keyboard combination shortcut
 	keyboardManagerService.bind = function (label, callback, opt) {
 		var fct, elt, code, k;
@@ -766,7 +766,7 @@ angular.module('fe0.helper', [])
 			e = e || $window.event;
 
 			// Disable event handler when focus input and textarea
-			if (opt['inputDisabled']) {
+			if (opt.inputDisabled) {
 				var elt;
 				if (e.target) elt = e.target;
 				else if (e.srcElement) elt = e.srcElement;
@@ -898,8 +898,8 @@ angular.module('fe0.helper', [])
 
 				if (k.length > 1) { // If it is a special key
 					if(special_keys[k] == code) kp++;
-				} else if (opt['keyCode']) { // If a specific key is set into the config
-					if (opt['keyCode'] == code) kp++;
+				} else if (opt.keyCode) { // If a specific key is set into the config
+					if (opt.keyCode == code) kp++;
 				} else { // The special keys did not match
 					if(character == k) kp++;
 					else {
@@ -920,7 +920,7 @@ angular.module('fe0.helper', [])
 						callback(e);
 					}, 1);
 
-				if(!opt['propagate']) { // Stop the event
+				if(!opt.propagate) { // Stop the event
 					// e.cancelBubble is supported by IE - this will kill the bubbling process.
 					e.cancelBubble = true;
 					e.returnValue = false;
@@ -939,22 +939,22 @@ angular.module('fe0.helper', [])
 		keyboardManagerService.keyboardEvent[label] = {
 			'callback':	fct,
 			'target':	elt,
-			'event':	opt['type']
+			'event':	opt.type
 		};
 		//Attach the function with the event
-		if(elt.addEventListener) elt.addEventListener(opt['type'], fct, false);
-		else if(elt.attachEvent) elt.attachEvent('on' + opt['type'], fct);
-		else elt['on' + opt['type']] = fct;
+		if(elt.addEventListener) elt.addEventListener(opt.type, fct, false);
+		else if(elt.attachEvent) elt.attachEvent('on' + opt.type, fct);
+		else elt['on' + opt.type] = fct;
 	};
 	// Remove the shortcut - just specify the shortcut and I will remove the binding
 	keyboardManagerService.unbind = function (label) {
 		label = label.toLowerCase();
 		var binding = keyboardManagerService.keyboardEvent[label];
-		delete(keyboardManagerService.keyboardEvent[label])
+		delete(keyboardManagerService.keyboardEvent[label]);
 		if(!binding) return;
-		var type	= binding['event'],
-		elt			= binding['target'],
-		callback	= binding['callback'];
+		var type	= binding.event,
+		elt			= binding.target,
+		callback	= binding.callback;
 		if(elt.detachEvent) elt.detachEvent('on' + type, callback);
 		else if(elt.removeEventListener) elt.removeEventListener(type, callback, false);
 		else elt['on'+type] = false;
