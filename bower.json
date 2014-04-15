@@ -19,13 +19,13 @@
 		"README.md"
 	],
 	"dependencies": {
-		"angular": "^1.2.15",
-		"angular-route": "^1.2",
-		"angular-animate": "^1.2",
-		"angular-loader": "^1.2",
-		"angular-translate": "^1.2",
-		"angular-mocks": "^1.2",
-		"angular-resource": "^1.2",
+		"angular": "^1.2",
+		"angular-route": "^1.2.8",
+		"angular-animate": "^1.2.9",
+		"angular-loader": "^1.2.10",
+		"angular-translate": "^1.2.11",
+		"angular-mocks": "^1.2.12",
+		"angular-resource": "^1.2.13",
 		"angular-bootstrap": "^0.10.0",
 		"angular-ui-utils": ">=0.1"
 	},
