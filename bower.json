@@ -1,40 +1,40 @@
 {
-    "name": "Fangular",
-    "description": "An angular spaghetti seed",
-    "homepage": "https://github.com/Festum/Fangular",
-    "license": "MIT",
-    "version": "0.0.1",
-    "private": true,
-    "main":{
-        "app"
-    },
-    "ignore": [
-        ".git",
-        ".gitignore",
-        ".jshintignore",
-        ".jshintrc",
-        ".travis.yml",
-        "bower.json",
-        "package.json",
-        "README.md"
-    ],
-    "dependencies": {
-        "angular": "~1.2",
-        "angular-route": "~1.2",
-        "angular-animate": "~1.2",
-        "angular-loader": "~1.2",
-        "angular-translate": "~1.2",
-        "angular-mocks": "~1.2",
-        "angular-resource": "~1.2",
-        "angular-bootstrap": "~1.2",
-        "angular-ui-utils": ">=0.1.1",
-        "angular-ui-router": ">=0.2.10",
-        "bootstrap": ">=3.1.1"
-    },
-    "devDependencies": {
-        "angular-cookies": "~1.2",
-        "angular-sanitize": "~1.2",
-        "angular-scenario": "~1.2",
-        "angular-touch": "~1.2"
-    }
+	"name": "Fangular",
+	"description": "An angular spaghetti seed",
+	"homepage": "https://github.com/Festum/Fangular",
+	"license": "MIT",
+	"version": "0.0.1",
+	"private": true,
+	"main":[
+		"app"
+	],
+	"ignore": [
+		".git",
+		".gitignore",
+		".jshintignore",
+		".jshintrc",
+		".travis.yml",
+		"bower.json",
+		"package.json",
+		"README.md"
+	],
+	"dependencies": {
+		"angular": "~1.2",
+		"angular-route": "~1.2",
+		"angular-animate": "~1.2",
+		"angular-loader": "~1.2",
+		"angular-translate": "~1.2",
+		"angular-mocks": "~1.2",
+		"angular-resource": "~1.2",
+		"angular-bootstrap": "~1.2",
+		"angular-ui-utils": ">=0.1.1",
+		"angular-ui-router": ">=0.2.10",
+		"bootstrap": ">=3.1.1"
+	},
+	"devDependencies": {
+		"angular-cookies": "~1.2",
+		"angular-sanitize": "~1.2",
+		"angular-scenario": "~1.2",
+		"angular-touch": "~1.2"
+	}
 }
