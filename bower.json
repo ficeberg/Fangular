@@ -25,14 +25,14 @@
 		"angular-loader": "^1.2.16",
 		"angular-translate": "^1.2.16",
 		"angular-mocks": "^1.2.16",
-		"angular-resource": "^1.2.16",
+		"angular-resource": "^1.2.15",
 		"angular-bootstrap": "^0.10.0",
 		"angular-ui-utils": ">=0.1"
 	},
 	"devDependencies": {
-		"angular-cookies": "^1.2.16",
-		"angular-sanitize": "^1.2.16",
-		"angular-scenario": "^1.2.16",
-		"angular-touch": "^1.2.16"
+		"angular-cookies": "^1.2.14",
+		"angular-sanitize": "^1.2.15",
+		"angular-scenario": "^1.2.13",
+		"angular-touch": "^1.2.12"
 	}
 }
