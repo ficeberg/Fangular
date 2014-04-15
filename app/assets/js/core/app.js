@@ -5,15 +5,14 @@ var app, deps;
 deps = [
 	'ngRoute',
 	'ngResource',
+	'ngAnimate',
 	'fe0.filters',
 	'fe0.helper',
 	'fe0.services',
 	'fe0.directives',
 	'fe0.controllers'
 ];
-if (angular.version.full.indexOf("1.2") >= 0) {
-	deps.push('ngAnimate');
-}
+
 app = angular.module('fe0', deps);
 
 app.config(['$routeProvider', function($routeProvider) {

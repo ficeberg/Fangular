@@ -1,12 +1,18 @@
 {
-  "name": "Fangular",
-  "description": "An AngularJS seed plus HeadJS, UI-Bootstrap, UI-Router, UI-Utils and Angular-Translate...",
-  "repository": "https://github.com/Festum/Fangular",
-  "devDependencies": {
-    "phantomjs" : "~1.9",
-    "karma" : "~0.10",
-    "karma-junit-reporter" : "~0.1",
-    "karma-jasmine" : "~0.1",
-    "protractor" : "~0.17.0"
-  }
+	"name": "Fangular",
+	"private": true,
+	"version": "0.4.2",
+	"description": "An angular spaghetti seed",
+	"repository": "https://github.com/Festum/Fangular",
+	"license": "MIT",
+	"devDependencies": {
+		"http-server": "^0.6.1",
+		"bower": "^1.3.1",
+		"shelljs": "^0.2.6"
+	},
+	"scripts": {
+		"postinstall": "bower install",
+		"start": "http-server -p 8000",
+		"update-index-async": "node -e \"require('shelljs/global'); sed('-i', /\\/\\/@@NG_LOADER_START@@[\\s\\S]*\\/\\/@@NG_LOADER_END@@/, '//@@NG_LOADER_START@@\\n' + cat('libs/angular-loader/angular-loader.min.js') + '\\n//@@NG_LOADER_END@@', 'index.html');\""
+	}
 }

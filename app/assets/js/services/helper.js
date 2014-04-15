@@ -1,5 +1,5 @@
 angular.module('fe0.helper', [])
-.value('version', '0.4.1')
+.value('version', '0.4.2')
 /**
  *                     bbbbbbbb
  *       OOOOOOOOO     b::::::b                         jjjj

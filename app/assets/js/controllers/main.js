@@ -1,6 +1,6 @@
 angular.module('fe0.controllers').controller('main', function($scope, $http, $document, $modal, orderByFilter) {
 
-	var url = "http://50.116.42.77:3001//api/bootstrap";
+	var url = "http://50.116.42.77:3001/api/bootstrap";
 	//iFrame for downloading
 	var $iframe = angular.element('<iframe>').css('display','none');
 	$document.find('body').append($iframe);
