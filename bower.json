@@ -27,8 +27,8 @@
 		"angular-resource": "^1.2",
 		"angular-translate": "^2",
 		"angular-bootstrap": "^0.10.0",
-		"angular-ui-utils": ">=0.1",
-		"angular-ui-router": ">=0.2.10",
+		"angular-ui-utils": "*",
+		"angular-ui-router": "*",
 		"bootstrap": "^3"
 	},
 	"devDependencies": {
