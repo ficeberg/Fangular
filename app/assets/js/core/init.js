@@ -1,5 +1,6 @@
 head.load(
-	'//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css',
+	'../bower_components/bootstrap/dist/css/bootstrap.min.css',
+	'../bower_components/bootstrap/dist/css/bootstrap-theme.min.css',
 	'assets/css/app.css',
 	'assets/css/demo.css',
 	'../bower_components/angular/angular.min.js',
