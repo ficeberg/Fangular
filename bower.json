@@ -29,7 +29,7 @@
 		"angular-bootstrap": "~1.2",
 		"angular-ui-utils": ">=0.1.1",
 		"angular-ui-router": ">=0.2.10",
-		"bootstrap": ">=3.1.1"
+		"bootstrap": "~3"
 	},
 	"devDependencies": {
 		"angular-cookies": "~1.2",
