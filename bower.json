@@ -27,14 +27,14 @@
 		"angular-resource": "^1.2",
 		"angular-translate": "^2",
 		"angular-bootstrap": "^0.10.0",
-		"angular-ui-utils": "*",
-		"angular-ui-router": "*",
+		"angular-ui-utils": "~0.1",
+		"angular-ui-router": "~0.2",
 		"bootstrap": "^3"
 	},
 	"devDependencies": {
-		"angular-cookies": "^1.2.14",
-		"angular-sanitize": "^1.2.15",
-		"angular-scenario": "^1.2.13",
-		"angular-touch": "^1.2.12"
+		"angular-cookies": "^1.2",
+		"angular-sanitize": "^1.2",
+		"angular-scenario": "^1.2",
+		"angular-touch": "^1.2"
 	}
 }
