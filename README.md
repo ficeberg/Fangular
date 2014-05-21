@@ -117,6 +117,14 @@ The seed app doesn't do much, just shows how to wire two controllers and views t
 
 To get you started you can simply clone the angular-seed repository and install the dependencies:
 
+### Prerequisites
+
+You need git to clone the angular-seed repository. You can get it from
+[http://git-scm.com/](http://git-scm.com/).
+
+We also use a number of node.js tools to initialize and test angular-seed. You must have node.js and
+its package manager (npm) installed.  You can get them from [http://nodejs.org/](http://nodejs.org/).
+
 ### Clone angular-seed
 
 Clone the angular-seed repository using [git][git]:
@@ -144,7 +152,11 @@ Behind the scenes this will also call `bower install`.  You should find that you
 folders in your project.
 
 * `node_modules` - contains the npm packages for the tools we need
-* `bower_components` - contains the angular framework files
+* `app/bower_components` - contains the angular framework files
+
+*Note that the `bower_components` folder would normally be installed in the root folder but
+angular-seed changes this location through the `.bowerrc` file.  Putting it in the app folder makes
+it easier to serve the files by a webserver.*
 
 ### Run the Application
 
@@ -210,7 +222,7 @@ npm test
 
 This script will start the Karma test runner to execute the unit tests. Moreover, Karma will sit and
 watch the source and test files for changes and then re-run the tests whenever any of them change.
-This is the recommended strategy; if you unit tests are being run every time you save a file then
+This is the recommended strategy; if your unit tests are being run every time you save a file then
 you receive instant feedback on any changes that break the expected code functionality.
 
 You can also ask Karma to do a single run of the tests and then exit.  This is useful if you want to
@@ -316,7 +328,7 @@ install the tool globally:
 sudo npm install -g http-server
 ```
 
-Then you can start your own development web server to server static files, from a folder, by
+Then you can start your own development web server to serve static files from a folder by
 running:
 
 ```
@@ -334,7 +346,7 @@ the general rule is that all you need in production are all the files under the 
 Everything else should be omitted.
 
 Angular apps are really just a bunch of static html, css and js files that just need to be hosted
-somewhere, where they can be accessed by browsers.
+somewhere they can be accessed by browsers.
 
 If your Angular app is talking to the backend server via xhr or other means, you need to figure
 out what is the best way to host the static files to comply with the same origin policy if

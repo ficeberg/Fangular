@@ -3,7 +3,7 @@
 	"description": "An angular spaghetti seed",
 	"homepage": "https://github.com/Festum/Fangular",
 	"license": "MIT",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"private": false,
 	"main":[
 		"app"

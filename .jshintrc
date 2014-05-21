@@ -1,6 +1,6 @@
 {
-  "globalstrict": true,
-  "globals": {
-    "angular": false
-  }
+	"globalstrict": true,
+	"globals": {
+		"angular": false
+	}
 }
