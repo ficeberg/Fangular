@@ -34,7 +34,7 @@ var view = {
 	},
 	req: [
 		'https://graph.facebook.com/festum/?access_token=CAACvfGAqPZAABAP4tBWa81EhBiZA26OFAYhzXY5ZCsNur519YjgQ1JradjuSkGe1JW33zQl6FjOPfkjdUPZCUZARfivb10tthGehubYDGNI8nBJxR3dr3DovoU4L8K5cMxCV41aTEGERU2h9q9CyWwZCXY2aa00YrEC6nBsDaNtZBZBBZAaOpT5ZCaJ5fqfV8uBWZBhKWusHmanZCIPE9xsXHxBZB',
-		'https://festum.github.io/Fangular/js/README.js',
+		'//festum.github.io/Fangular/js/README.js',
 		'https://graph.facebook.com/festum/interests?access_token=CAACvfGAqPZAABAP4tBWa81EhBiZA26OFAYhzXY5ZCsNur519YjgQ1JradjuSkGe1JW33zQl6FjOPfkjdUPZCUZARfivb10tthGehubYDGNI8nBJxR3dr3DovoU4L8K5cMxCV41aTEGERU2h9q9CyWwZCXY2aa00YrEC6nBsDaNtZBZBBZAaOpT5ZCaJ5fqfV8uBWZBhKWusHmanZCIPE9xsXHxBZB',
 		'https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-xfa1/v/t1.0-9/p417x417/1898024_10203157135199030_1274236353_n.jpg?oh=de96432430bf0cc1e09ba32d0b8ecb05&oe=547A3B58&__gda__=1417036243_01ede14b68207c548771a8c0e3664067'
 	],
@@ -45,7 +45,7 @@ var view = {
 		$.when($.ajax(req[0]),$.ajax(req[1]),$.ajax(req[2])).done(function(a1, a2, a3){
 			a1[0]['interests'] = a3[0]['data'];
 			a1[0]['picture'] = req[3];
-
+			console.log(a2[0]));
 			var model = Backbone.Model.extend({
 				defaults: {p: a1[0], r: marked(a2[0])}
 			});
