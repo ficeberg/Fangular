@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Festum">
+	<title>Fangular GH-Home</title>
+	<script src='//cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js' data-headjs-load='js/init.js'></script>
+	<link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+	<link href="//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<script type="text/html" id="ptemplate">
+		<div class="col-lg-6">
+			<img src="<%= p.picture %>" />
+		</div>
+		<div class="col-lg-6">
+			<p>Name: <%= p.name %></p>
+			<p>Birthday: <%= p.birthday %></p>
+			<p>Live: <%= p.location.name %></p>
+		</div>
+		<div class="col-lg-8 col-lg-offset-2 text-center">
+			<h3>Interests</h3>
+		</div>
+		<div class="text-center">
+			<div class="bootstrap-tagsinput" id="interests"></div>
+		</div>
+	</script>
+	<script type="text/html" id="rtemplate">
+		<%= r %>
+	</script>
+</head>
+<body id="page-top" class="index">
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header page-scroll">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="#page-top"><img src="./img/logo.png" id="logo"></a>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="hidden">
+						<a href="#page-top"></a>
+					</li>
+					<li class="page-instruction">
+						<a href="#instruction">Instruction</a>
+					</li>
+					<li class="page-scroll">
+						<a href="#me">Me</a>
+					</li>
+					<li class="page-scroll">
+						<a href="#tech">Technologies</a>
+					</li>
+					<li class="page-scroll">
+						<a href="./test/">Just a Test</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+	<nav id="sidebar-wrapper" class="active">
+		<ul class="sidebar-nav">
+			<a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+			<li>
+				<a href="#page-top">Home</a>
+			</li>
+		</ul>
+	</nav>
+	<header class="bs-header text-center" id="overview">
+		<div class="container">
+			<h1>
+				Fangular
+			</h1>
+			<p>Powered by <span class="small">Festum</span></p>
+			<p>
+				<a class="btn btn-outline-inverse btn-lg" href="http://github.com/Festum/Fangular"><i class="icon-github"></i>Code on Github</a>
+				<a class="btn btn-outline-inverse btn-lg" href="http://github.com/Festum/Fangular/archive/master.zip">
+					<i class="glyphicon glyphicon-download-alt"></i> Download <small>(0.10.0)</small>
+				</a>
+				<a class="btn btn-outline-inverse btn-lg" href="http://facebook.com/festum"><i class="icon-wrench"></i> Find Festum</a>
+			</p>
+		</div>
+	</header>
+
+	<section id="instruction">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<h2>Instruction</h2>
+					<hr class="star-primary">
+				</div>
+			</div>
+			<div class="row" id="readme"></div>
+		</div>
+	</section>
+
+	<section class="success" id="me">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<h2>Me</h2>
+					<hr class="star-light">
+				</div>
+			</div>
+			<div class="row" id="profile">
+			</div>
+		</div>
+	</section>
+
+	<section id="tech">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<h2>Technologies</h2>
+					<hr class="star-primary">
+				</div>
+			</div>
+			<div class="row">
+				<ul class="banner-technologies-inner-technologies">
+					<li>
+						<a href="http://expressjs.com"><img src="/img/express.png" alt="Express" height="60px" /></a>
+					</li>
+					<li>
+						<a href="http://angularjs.org/"><img src="/img/angularjs.png" alt="AngularJS" height="60px" /></a>
+					</li>
+					<li>
+						<a href="http://nodejs.org"><img src="/img/nodejs.png" alt="Node.js" height="60px" /></a>
+					</li>
+					<li>
+						<a href="http://github.com"><img src="/img/github.png" alt="GitHub" height="60px" /></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<footer class="text-center">
+		<div class="footer-above">
+			<div class="container">
+				<div class="row">
+					<div class="footer-col col-md-4">
+						<h3>Socrates</h3>
+						<p>The only true wisdom is in knowing you know nothing.</p>
+					</div>
+					<div class="footer-col col-md-4">
+						<h3>Social</h3>
+						<ul class="list-inline">
+							<li>
+								<a href="http://facebook.com/festum" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+							</li>
+							<li>
+								<a href="http://google.com/+FEMiUM" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+							</li>
+							<li>
+								<a href="http://twitter.com/festum" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+							</li>
+							<li>
+								<a href="http://linkedin.com/in/festum" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+							</li>
+							<li>
+								<a href="http://bitbucket.com/festum" class="btn-social btn-outline"><i class="fa fa-fw fa-bitbucket"></i></a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer-col col-md-4">
+						<h3>About Fangular</h3>
+						<p>This seed is extracted from my daily work projects, have fun.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-below">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						Copyright &copy; Fangular 2014
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<div class="scroll-top page-scroll visible-xs visble-sm">
+		<a class="btn btn-primary" href="#page-top">
+			<i class="fa fa-chevron-up"></i>
+		</a>
+	</div>
+</body>
+</html>
