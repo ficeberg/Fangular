@@ -45,7 +45,7 @@ var view = {
 		$.when($.ajax(req[0]),$.ajax(req[1]),$.ajax(req[2])).done(function(a1, a2, a3){
 			a1[0]['interests'] = a3[0]['data'];
 			a1[0]['picture'] = req[3];
-			console.log(a2[0]));
+			console.log(a2[0]);
 			var model = Backbone.Model.extend({
 				defaults: {p: a1[0], r: marked(a2[0])}
 			});
