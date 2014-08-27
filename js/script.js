@@ -43,11 +43,9 @@ var view = {
 		var req = this.req;
 		var template = this.template;
 
-		$.when($.ajax(req[0]),$.get(req[1]),$.ajax(req[2])).done(function(a1, a3){
+		$.when($.ajax(req[0]),$.get(req[1]),$.ajax(req[2])).done(function(a1, a2, a3){
 			a1[0]['interests'] = a3[0]['data'];
 			a1[0]['picture'] = req[3];
-
-			alert("test");
 
 			var model = Backbone.Model.extend({
 				defaults: {p: a1[0], r: marked(a2[0])}
@@ -57,7 +55,7 @@ var view = {
 				p: new template.p({model:new model(), el : '#profile'}),
 				r: new template.r({model:new model(), el : '#readme'})
 			};
-			alert("test2");
+
 			view.p.render();
 			view.r.render();
 
